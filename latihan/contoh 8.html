@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>umur</title>
+
+  <script type="text/javascript">
+      function validasi(){
+          var nama= document.getElementById["nama"].value;
+          
+          var umuranda= document.getElementById["umuranda"].value;
+  
+          var umur ="";
+  
+          if(umuranda <=5){
+      umur = "wah masih balita";
+    }
+  else if(umuranda <=12){
+      umur = "kamu mah masih bocah";
+  }
+  else if(umuranda <=18){
+      umur = "cie yang sudah remaja";
+    }
+    else if(umuranda <=40){
+        umur = "sudah masuk kategori dewasa";
+    }
+    else if(umuranda <=60){
+        umur = "orang tua sudah banyak istirahat";
+    }
+    else{
+        (umuranda=>60)
+        umur = "panjang umur perjuangan,sehat terus dan bahagia selalu"
+    }
+
+  document.getElementById("nama").value;
+  document.getElementById(`${umur}`).value;
+    
+          }
+          </script>
+</head>
+<body>
+    <center>
+
+        <label>Nama</label>
+        <input id="nama" type="text">
+        <label>Umur</label>
+        <input id="umuranda" type="number"placeholder="umuranda">
+        <label>Hasil :</label>
+        <Label id="umur"></Label>
+        <br><br>
+        <input type="button" value="Proses" onclick="proses()">
+    </center>
+</body>
+</html>

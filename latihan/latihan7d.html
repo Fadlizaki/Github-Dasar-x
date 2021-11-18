@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>Penjumlahan 2 Variabel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <style>
+                .box {
+                    width: 40%;
+                    border-radius: 5px;
+                    border: 1px solid #9b9b9b;
+                    padding: 20px 0px 20px 0px;
+                    margin-left: 30%;
+                }
+                .h2{
+                    font-family: calibri;
+                    font-weight: lighter;
+                    letter-spacing: 3px;
+                }
+                #bil1{
+                    padding: 5px;
+                }
+           
+                #bil2{
+                    padding: 5px;
+                }
+                #hasil{
+                    color: #ff0b0b;
+                }
+                .tbl1{
+                    font-family: calibri;
+                }
+                .btn{
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    border: 0px;
+                    color: #fff;
+                    background: #3b7fff;
+                }
+            </style>
+      
+        <script>
+           
+            function Hitung(dat3,dat4,dat5){
+                var total,totalrat;
+                total = dat3+dat4+dat5;
+              
+                totalrat = total / 3;
+                return totalrat;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="box">
+            <center>
+                <h2 class="h2">konversi mencari rata rata</h2>
+              
+        <table class="tbl1">
+            <tr>
+                <td><label>Nama</label></td>
+                <td>=</td>
+                <td><input type="text" id="name" placeholder="Masukan text"></td>
+            </tr>
+            <tr>
+                <td><label>nis</label></td>
+                <td>=</td>
+                <td><input type="text" id="nis" placeholder="Masukan bilangan "></td>
+            </tr>
+            <tr>
+                <td><label>uts</label></td>
+                <td>=</td>
+                <td><input type="text" id="uts" placeholder="Masukan bilangan 1"></td>
+            </tr>
+            <tr>
+                <td><label>Tugas</label></td>
+                <td>=</td>
+                <td><input type="text" id="tgs" placeholder="Masukan bilangan 1"></td>
+            </tr>
+            <tr>
+                <td><label>uas</label></td>
+                <td>=</td>
+                <td><input type="text" id="uas" placeholder="Masukan bilangan 1"></td>
+            </tr>
+            
+            <tr>
+                <td><label>Rata-Rata</label></td>
+                <td>=</td>
+                <td><label id="rata_rata"></label></td>
+            </tr>
+        </table>
+  <br>
+  
+  <input type="button" id="btn" value=" Rata-Rata" class="btn" onClick="Ratarata()">
+            </center>
+        </div>
+      <script>
+          
+          
+            
+            
+            function Output(data){
+                document.getElementById("rata_rata").innerHTML = data;
+            }
+           
+            function InputData(Bilangan){
+                var data;
+                data = parseFloat(document.getElementById(Bilangan).value);
+                return data;
+              }
+           
+          function Ratarata(){
+            //Deklarasi Variable
+            var dat3,dat4,dat4,ratarata;
+
+            //Input
+            dat3  = InputData("uts");
+            dat4  = InputData("tgs");
+            dat5  = InputData("uas");
+            //Proses
+            ratarata = Hitung(dat3,dat4,dat5);
+            //OutPut
+            Output(ratarata);
+          }
+        
+      </script>
+    </body>
+</html>

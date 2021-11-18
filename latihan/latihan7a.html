@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<title> Konverter Suhu Celsius ke Kelvin </title>
+<body>
+
+<h2> Pengubah Suhu </h2>
+<p> Ketik nilai dalam  Celsius untuk mengonversi nilai menjadi Kelvin: </p>
+
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Kelvin: <span id="outputKelvin"></span></p>
+
+<script>
+function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputKelvin").innerHTML=valNum+273.15;
+}
+</script>
+
+</body>
+</html>

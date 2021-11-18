@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    font-family: 'roboto', sans-serif;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(120deg,#2980b9,#1abc9c);
+}
+::selection{
+    color: #fff;
+    background: #1abc9c;
+}
+.container{
+    width: 330px;
+    background: #fff;
+    text-align: center ;
+    border-radius: 5px;
+    padding: 50px 35px 10px 35px;
+}
+.container{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+.container .form-outer{
+    width:100%;
+    overflow: hidden;
+
+}

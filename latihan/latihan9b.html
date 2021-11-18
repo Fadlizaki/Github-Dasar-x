@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nilai</title>
+<style>
+  body {
+  font-family: "Lato", sans-serif;
+  background-COLOR:rgb(105, 0, 0);
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0, 0, 0);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgb(117, 0, 0);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+   form{
+     font-family:serif;
+     font-size: medium;
+     font-weight: 700;
+     color: rgb(255, 255, 255);
+     text-align: center;
+     position: relative;
+     display: block;
+   }
+  </style>
+</head>
+<body>
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">Nama</a>
+    <a href="#">Umur</a>
+    <a href="#">Kategori</a>
+  </div>
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">☰ Menu</button> 
+  <!--form------->
+  <form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()">
+     <h2><p>Menentukan Nilai</p></h2>
+      Nama : <input type="text" name="nama" placeholder="nama"><br>
+      Kelas : <input type="text" name="kelas" placeholder="kelas"><br>
+      Nilai : <input type="text" name="nilai" placeholder="nilai">
+    
+    
+      <input class="login" type="submit" name="submit" value="cek">
+    </form>
+  </body>
+  <script type="text/javascript">
+        function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+  function validasi(){
+    var nama= document.forms["myForm"]["nama"].value;
+    var kelas= document.forms["myForm"]["kelas"].value;
+    var nilai= document.forms["myForm"]["nilai"].value;
+
+    var grade ="";
+
+if(nilai >= 81){
+    grade = "A";
+}
+else if(nilai >= 61){
+    grade = "B";
+}
+else if(nilai >= 41){
+    grade = "C";
+}
+else if(nilai >= 16){
+    grade = "D";
+}
+else if(nilai >= 0){
+    grade = "E";
+}
+else{
+    grade = "F"
+}
+document.write("Nama : " + nama + "<br>")
+document.write("Kelas : " + kelas + "<br>")
+document.write(`Nilai  anda : ${grade} `  );
+  
+        }
+</script>
+</html>

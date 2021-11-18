@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()">
+        
+          <p>non member</p>
+    
+          jenis <input type="text" autocomplete="off" name="jenis" placeholder="jenis kamar" required><br>
+          lama  <input type="text" autocomplete="off" name="lama" placeholder="lama menginap" required><br>
+          
+        
+        
+          <input class="login" type="submit" name="submit" value="login">
+        </form>
+      </body>
+      <script type="text/javascript">
+      function validasi(){
+        var jenis = document.forms["myForm"]["jenis"].value;
+        var lama = document.forms["myForm"]["lama"].value;
+        var kamar = "";
+        var tarif = 0;
+        var diskon = 0;
+    
+    //proses perhitungan
+    if (jenis==1){
+      tarif=lama*275000;
+      kamar="duluxe room";
+    }else if (jenis==2){
+      tarif=lama*300000
+      kamar="suite room";
+    }else if( jenis==3){
+      tarif=lama*375000;
+        kamar="president room";
+    }
+    
+    if (lama >=4 && lama <=7){
+      diskon = 0.10 * tarif;
+    }else if (lama > 7){
+      diskon = 0.15 * tarif;
+    }
+    
+    
+    
+     var bayar = tarif - diskon;
+    
+    
+    
+    document.write("jenis kamar : " + kamar + "<br>");
+    document.write("<P>lama menginap : " + lama + "<br></p>");
+    document.write(`<p>Tarif Penginapan : ${tarif} </p>`  );
+    document.write(`<p>Diskon Penginapan : ${diskon} </p>`  );
+    document.write(`<p>Total Pembayaran : ${bayar} </p>`  );
+      
+            }
+    </script>
+</body>
+</html>

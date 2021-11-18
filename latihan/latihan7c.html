@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2> Pengubah Suhu </h2>
+<p> Ketik nilai dalam fields Celsius untuk mengonversi nilai menjadi radius: </p>
+    <p>
+        <label>Celsius</label>
+      <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+    </p>
+    <p>radius: <span id="outputradius"></span></p>
+  <script>
+      function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputradius").innerHTML=valNum* 0.8;
+      }
+  </script>
+</body>
+</html>

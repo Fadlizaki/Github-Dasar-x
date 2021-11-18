@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Konversi Waktu Dari Detik</title>
+    <script type="text/javascript">
+    function proses(){
+ var x;
+ x = parseInt(document.getElementById("lbldetk").value);
+  var y;
+  var hari;
+  var jam;
+  var menit;
+  var detik;
+
+y = x % 3600;
+hari  = x / 86400;
+jam   = x / 3600;
+menit = y / 60;
+detik = y % 60;
+
+result.innerHTML = Math.floor(hari) + 'Hari '+ Math.floor(jam) + ' Jam ' + Math.floor(menit) + ' Menit ' + Math.floor(detik) + ' Detik ';
+    }
+    function reset(){
+            document.getElementById("lbldetk").value = "";
+            document.getElementById("result").innerHTML = "Masukan Kembali";
+        }
+    </script>
+    <center>
+        <h1>Konversi Detik Ke Hari,Jam, Menit dan Detik</h1>
+    <br>
+    </center>
+    
+</head>
+<body>
+        <center>
+    
+<label>Input</label>
+<input id="lbldetk" type="number" placeholder="Detik">
+<label>Detik</label>
+<br><br>
+<label>Hasil :</label>
+<label id="result"></label>
+<br><br>
+<input type="button" value="Proses" onclick="proses()">
+<input type="button" value="Reset" onclick="reset()">
+</center>
+
+</body>
+</html>

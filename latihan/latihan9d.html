@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      document.write("***sistem informasi perhotelan*** <br><br> ");
+      nama = prompt("masukan nama pelanggan :");
+       document.write("pilih jenis kamar : <br>");
+       document.write("1 deluxe room Rp 275.000/hari <br>");
+       document.write("2 suite room Rp 300.000/hari <br>");
+       document.write("3 president room Rp 370.000/hari <br>");
+       kamar1=275000;
+       kamar2=300000;
+       kamar3=370000;
+       kamar = prompt("jenis kamar yang di pesan :");
+       document.write("jenis kamar yang di pesan : " + kamar + "<br>");
+       lamamenginap = prompt("Lama menginap :");
+       document.write("<br>status pelanggan : <br>");
+       document.write("1.member  <br>");
+       document.write("2.non member <br>");
+       status = prompt("jenis status pelanggan :");
+       document.write("jenis  status pelanggan yang di pilih : " + status+ "<br>");
+       bayar  = prompt("nominal yang harus di bayar : Rp");
+             //note
+             var tarif;
+             var diskon;
+             var status;
+             var bayar;
+
+
+
+       
+       document.write("<br>***nota pembayaran hotel bandung** <br><br>");
+       document.write("nama pelanggan :" + nama +"<br>" );
+       document.write("jenis kamar : " + kamar +  "<br>");
+       document.write("tarif penginapan : Rp " + tarif + "<br>");
+       document.write("diskon penginapan : Rp " + diskon + "<br>");
+       document.write("nominal yang harus di bayar : Rp" + bayar +"<br>");
+            // proses perhitungan
+            if (jenis ==1){
+                tarif=lama*275000;
+                kamar="duluxe room";
+            }else if (jenis ==1){
+                tarif=lama*300000;
+                kamar="suite room";
+            }else if (jenis ==1){
+                tarif=lama*375000;
+                kamar="president room";
+            }
+            if(status =="member"){
+                if(lama>=4&&lama <=7){
+                    diskon=0.20*tarif;
+                    jumlah=tarif-diskon;
+                    document.write("jumlah=tarif"+jumlah)
+                }else if(lama>7){
+                    diskon=0.35*tarif;
+                }
+            if(status =="no member"){
+                if(lama>=4&&lama <=7){
+                    diskon=0.10*tarif;
+                }else if(lama>7){
+                    diskon=0.15*tarif;
+                }
+            }
+            var bayar=tarif-diskon;
+            
+
+        }
+
+    </script>
+</body>
+</html>
